@@ -1,0 +1,34 @@
+header {
+  position: relative;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  background-color: #c9c9c9;
+  background-image: url("https://splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-Slate-Stone-Xeromatic-1440x953.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+header .header-content {
+  position: relative;
+  width: 100%;
+  padding: 100px 15px;
+  text-align: center;
+  z-index: 2;
+}
+
+header .header-content .inner h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+header .header-content .inner p {
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
