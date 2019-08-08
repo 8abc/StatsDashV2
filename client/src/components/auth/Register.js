@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Button } from "react-bootstrap";
-import { Form } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
@@ -25,6 +23,7 @@ class Register extends Component {
       this.props.history.push("/dashboard");
     }
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
@@ -36,6 +35,7 @@ class Register extends Component {
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
   onSubmit = e => {
     e.preventDefault();
 
@@ -68,13 +68,9 @@ class Register extends Component {
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
             </div>
-
-            <Form noValidate onSubmit={this.onSubmit}>
-              <Form.Group controlId="formBasic">
-                <Form.Label>Name</Form.Label>
-                <span className="red-text">{errors.name}</span>
-                <Form.Control
-                  placeholder="Enter Name"
+            <form noValidate onSubmit={this.onSubmit}>
+              <div className="input-field col s12">
+                <input
                   onChange={this.onChange}
                   value={this.state.name}
                   error={errors.name}
@@ -84,28 +80,25 @@ class Register extends Component {
                     invalid: errors.name
                   })}
                 />
-              </Form.Group>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email Adress</Form.Label>
-                <span className="red-text">{errors.email}</span>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter email"
+                <label htmlFor="name">Name</label>
+                <span className="red-text">{errors.name}</span>
+              </div>
+              <div className="input-field col s12">
+                <input
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}
                   id="email"
+                  type="email"
                   className={classnames("", {
                     invalid: errors.email
                   })}
                 />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <span className="red-text">{errors.password}</span>
-                <Form.Control
-                  placeholder="Password"
+                <label htmlFor="email">Email</label>
+                <span className="red-text">{errors.email}</span>
+              </div>
+              <div className="input-field col s12">
+                <input
                   onChange={this.onChange}
                   value={this.state.password}
                   error={errors.password}
@@ -115,28 +108,38 @@ class Register extends Component {
                     invalid: errors.password
                   })}
                 />
-              </Form.Group>
-
-              <Form.Group controlId="formBasicPassword2">
-                <Form.Label> Confirm Password</Form.Label>
-                <span className="red-text">{errors.password2}</span>
-                <Form.Control
-                  type="password"
-                  placeholder="Confirm Password"
+                <label htmlFor="password">Password</label>
+                <span className="red-text">{errors.password}</span>
+              </div>
+              <div className="input-field col s12">
+                <input
                   onChange={this.onChange}
                   value={this.state.password2}
                   error={errors.password2}
                   id="password2"
+                  type="password"
                   className={classnames("", {
                     invalid: errors.password2
                   })}
                 />
-              </Form.Group>
-
-              <Button variant="primary" type="submit">
-                Sign Up
-              </Button>
-            </Form>
+                <label htmlFor="password2">Confirm Password</label>
+                <span className="red-text">{errors.password2}</span>
+              </div>
+              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+                <button
+                  style={{
+                    width: "150px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                  }}
+                  type="submit"
+                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

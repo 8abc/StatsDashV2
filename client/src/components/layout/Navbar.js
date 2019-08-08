@@ -1,21 +1,20 @@
-import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import React from "react";
+import { Navbar, Button, Icon } from "react-materialize";
 
-class NavBar extends Component {
-  render() {
-    return (
-      <Navbar bg="light" expand="lg" fixed="top">
-        <Navbar.Brand href="/">StatsDash</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/">About</Nav.Link>
-            <Nav.Link href="#">Dashboard</Nav.Link>
-            <Nav.Link href="#">Log Out</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  }
-}
-export default NavBar;
+const Nav = props => {
+  const { brand } = props;
+  return (
+    <Navbar brand={brand} alignLinks="right">
+      <Button node="/">button</Button>
+      <Button node="/">
+        button
+        <Icon right>cloud</Icon>
+      </Button>
+      <Button node="/" large>
+        large button
+      </Button>
+    </Navbar>
+  );
+};
+
+export default Nav;
