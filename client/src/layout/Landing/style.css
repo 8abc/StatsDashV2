@@ -1,0 +1,60 @@
+* {
+  font-family: monospace;
+}
+body {
+  color: #777;
+  background: #f7f7f7;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-weight: 300;
+  text-shadow: none;
+}
+.mar-bot40 {
+  margin-bottom: 40px;
+}
+.align-center {
+  text-align: center;
+}
+.text-bold {
+  font-weight: 900;
+}
+.text-bold-header {
+  font-weight: 980;
+  color: black;
+}
+.pad-top40 {
+  padding-top: 40px;
+}
+blockquote.bigquote {
+  border: none;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+.color-white.txt-shadow {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.parallax-image {
+  background-image: url("./ballCropped.jpg");
+}
+.parallax-image2 {
+  background-image: url("./image12Cropped3.jpg");
+}
+
+/* TEAM PHOTOS*/
+.member-photo {
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 0 20px 0;
+}
+.member-photo img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.team-detail h4 {
+  font-weight: 700;
+}

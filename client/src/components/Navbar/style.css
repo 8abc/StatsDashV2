@@ -1,0 +1,18 @@
+.grey {
+  height: 90px;
+}
+#navButton {
+  margin-top: 15px;
+  font-family: monospace;
+}
+
+.brand {
+  margin-left: 40px;
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+#authButton {
+  font-family: monospace;
+  margin-top: 15px;
+}
