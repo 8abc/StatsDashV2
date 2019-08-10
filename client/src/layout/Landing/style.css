@@ -42,7 +42,7 @@ blockquote.bigquote {
 }
 
 /* TEAM PHOTOS*/
-/* .member-photo {
+.member-photo {
   box-sizing: border-box;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -57,4 +57,4 @@ blockquote.bigquote {
 
 .team-detail h4 {
   font-weight: 700;
-} */
+}

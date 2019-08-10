@@ -27,7 +27,6 @@ const NavBar = props => {
           </NavItem>
         </div>
       ) : (
-        // below will show if false
         <div>
           <Button
             href="/login"
@@ -36,7 +35,7 @@ const NavBar = props => {
             node="a"
           >
             Login
-            <Icon right>add</Icon>
+            <Icon right>person</Icon>
           </Button>
           <Button
             href="/register"
@@ -45,7 +44,7 @@ const NavBar = props => {
             node="a"
           >
             Register
-            <Icon right>create</Icon>
+            <Icon right>person_add</Icon>
           </Button>
         </div>
       )}
