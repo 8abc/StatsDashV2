@@ -10,44 +10,30 @@ const NavBar = props => {
       brand={<span className="brand">StatsDash</span>}
       alignLinks="right"
     >
-      {props.user.id ? (
-        // between ? : will show if true
-        <div>
-          <NavItem href="/">
-            <Button className="blue accent-3" id="navButton" node="a">
-              Home
-              <Icon right>home</Icon>
-            </Button>
-          </NavItem>
-          <NavItem href="/dashboard">
-            <Button className="blue accent-3" id="navButton" node="a">
-              Dashboard
-              <Icon right>dashboard</Icon>
-            </Button>
-          </NavItem>
-        </div>
-      ) : (
-        <div>
-          <Button
-            href="/login"
-            className="blue accent-3"
-            id="authButton"
-            node="a"
-          >
-            Login
-            <Icon right>person</Icon>
-          </Button>
-          <Button
-            href="/register"
-            className="blue accent-3"
-            id="authButton"
-            node="a"
-          >
-            Register
-            <Icon right>person_add</Icon>
-          </Button>
-        </div>
-      )}
+      <NavItem href="/">
+        <Button waves="light" id="navButton" node="a">
+          Home
+          <Icon right>home</Icon>
+        </Button>
+      </NavItem>
+      <NavItem href="/dashboard">
+        <Button waves="light" id="navButton" node="a">
+          Dashboard
+          <Icon right>dashboard</Icon>
+        </Button>
+      </NavItem>
+      <NavItem href="/login">
+        <Button waves="light" id="authButton" node="a">
+          Login
+          <Icon right>person</Icon>
+        </Button>
+      </NavItem>
+      <NavItem href="/register">
+        <Button waves="light" id="authButton" node="a">
+          Register
+          <Icon right>person_add</Icon>
+        </Button>
+      </NavItem>
     </Navbar>
   );
 };
