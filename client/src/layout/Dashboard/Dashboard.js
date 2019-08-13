@@ -2,6 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import {
+  Row,
+  Col,
+  SideNav,
+  SideNavItem,
+  Button,
+  Navbar,
+  NavItem,
+  Icon,
+  Modal,
+  Select,
+  RadioGroup,
+  onChange
+} from "react-materialize";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -13,16 +27,61 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="landing-copy col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+      <div>
+        <SideNav
+          trigger={
+            <Button
+              className="blue accent-3"
+              waves="light"
+              id="navButton2"
+              node="a"
+            >
+              Dashboard
+              <Icon right>dashboard</Icon>
+            </Button>
+          }
+          options={{ closeOnClick: true }}
+          className="dashboardButton"
+        >
+          <SideNavItem
+            userView
+            user={{
+              background: "https://placeimg.com/640/480/tech",
+              image: ""
+            }}
+          />
+          <SideNavItem href="#!icon" icon="person">
+            <b>Hey there,</b> {user.name.split(" ")[0]}
+          </SideNavItem>
+
+          <SideNavItem href="#!second">
+            <Modal
+              header="Search"
+              trigger={
+                <button
+                  className="btn waves-effect waves-light blue accent-3"
+                  type="submit"
+                  name="action"
+                >
+                  Search
+                  <i class="material-icons right">search</i>
+                </button>
+              }
+            >
+              <p>
+                <Select multiple value={[""]}>
+                  <option value="" disabled>
+                    Select what you want to
+                  </option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </Select>
               </p>
-            </h4>
+            </Modal>
+          </SideNavItem>
+          <SideNavItem divider />
+          <SideNavItem className="logout" waves href="#!third">
             <button
               style={{
                 width: "150px",
@@ -35,8 +94,8 @@ class Dashboard extends Component {
             >
               Logout
             </button>
-          </div>
-        </div>
+          </SideNavItem>
+        </SideNav>
       </div>
     );
   }
