@@ -1,0 +1,11 @@
+* {
+  background-color: #808080;
+  font-family: monospace;
+}
+#root > div > div {
+  z-index: 99999 !important;
+}
+.logout {
+  margin-top: 80px;
+  height: 100px !important;
+}
