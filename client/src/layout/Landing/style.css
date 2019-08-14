@@ -17,6 +17,10 @@ body {
 }
 .text-bold {
   font-weight: 900;
+  font-size: 50px;
+}
+.black-text {
+  font-size: 20px;
 }
 .text-bold-header {
   font-weight: 980;
@@ -41,20 +45,27 @@ blockquote.bigquote {
   background-image: url("./image12Cropped3.jpg");
 }
 
-/* TEAM PHOTOS*/
-.member-photo {
-  box-sizing: border-box;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 0 0 20px 0;
-}
-.member-photo img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+/* TEAM SECTION */
+#team {
+  padding: 60px 0;
 }
 
-.team-detail h4 {
-  font-weight: 700;
+#team-description {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#team img {
+  border-radius: 10px 10px 0 0;
+}
+
+/* FOOTER */
+#footer {
+  background-color: black;
+  height: 50px;
+}
+#footer-text {
+  color: white;
+  font-size: 20px;
+  align-content: center;
 }

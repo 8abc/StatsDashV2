@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+// import Footer from "./components/Footer/Footer";
 import {
   Row,
   Col,
@@ -96,6 +97,7 @@ class Dashboard extends Component {
             </button>
           </SideNavItem>
         </SideNav>
+        {/* <Footer /> */}
       </div>
     );
   }
