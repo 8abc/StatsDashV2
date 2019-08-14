@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import { Parallax, Background } from "react-parallax";
 import { Parallax, Row, Col } from "react-materialize";
+// import Footer from "./components/Footer/Footer";
 import "./style.css";
 
 class Landing extends Component {
@@ -28,21 +29,79 @@ class Landing extends Component {
         </div>
 
         <Parallax className="parallax-image2" image={<img />} />
-        <div className="section white">
-          <div className="row container">
-            <h4 className="text-bold">Our Team</h4>
-            <h5 className="grey-text text-darken-3 lighten-3">
-              <Col s={4} className="black-text">
-                Anadelaine Catalla
-              </Col>
-              <Col s={4} className="black-text">
-                Beccy Valentine
-              </Col>
-              <Col s={4} className="black-text">
-                Alexander Sigala
-              </Col>
-            </h5>
-          </div>
+        <div className="About-container z-depth-3 align-center">
+          <section id="team">
+            <h5 className="text-bold">The Team</h5>
+            <p className="black-text" id="team-description">
+              A full-stack project for UC Berkeley Extension Web Development
+              Immersive created by:
+            </p>
+            <div className="container">
+              <div className="row">
+                <div className="col s12 m4">
+                  <div className="card">
+                    <div className="card-image">
+                      <img
+                        className="profile-pic"
+                        src="https://avatars2.githubusercontent.com/u/46228172?s=460&v=4"
+                        alt="Ana"
+                      />
+                    </div>
+                    <div className="card-content team-members">
+                      <a href="https://github.com/8abc" className="team-link">
+                        Anadelaine Catalla
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col s12 m4">
+                  <div className="card">
+                    <div className="card-image">
+                      <img
+                        className="profile-pic"
+                        src="https://avatars2.githubusercontent.com/u/46587755?s=460&v=4"
+                        alt="Beccy"
+                      />
+                    </div>
+                    <div className="card-content">
+                      <a
+                        href="https://github.com/beccyv11"
+                        className="team-link"
+                      >
+                        Beccy Valentine
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col s12 m4">
+                  <div className="card">
+                    <div className="card-image">
+                      <img
+                        className="profile-pic"
+                        src="https://avatars0.githubusercontent.com/u/46912682?s=460&v=4"
+                        alt="Alex"
+                      />
+                    </div>
+                    <div className="card-content">
+                      <a
+                        href="https://github.com/po1sigala"
+                        className="team-link"
+                      >
+                        Alexander Sigala
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        {/* <Footer /> */}
+        <div className="align-center" id="footer">
+          <span className="align-center" id="footer-text">
+            Created by Ana Catalla, Beccy Valentine and Alex Sigala &copy;{" "}
+            {new Date().getFullYear()}
+          </span>
         </div>
       </div>
     );
