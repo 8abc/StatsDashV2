@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+// import RosterCard from "./components/RosterCard/RosterCard";
 // import Footer from "./components/Footer/Footer";
 import {
   Row,
@@ -15,7 +16,9 @@ import {
   Modal,
   Select,
   RadioGroup,
-  onChange
+  onChange,
+  Card,
+  CardTitle
 } from "react-materialize";
 
 class Dashboard extends Component {
@@ -48,7 +51,8 @@ class Dashboard extends Component {
             userView
             user={{
               background: "https://placeimg.com/640/480/tech",
-              image: ""
+              image:
+                "https://st2.depositphotos.com/thumbs/4398873/vector/7554/75546059/api_thumb_450.jpg"
             }}
           />
           <SideNavItem href="#!icon" icon="person">
@@ -97,7 +101,81 @@ class Dashboard extends Component {
             </button>
           </SideNavItem>
         </SideNav>
-        {/* <Footer /> */}
+        {/* <RosterCard /> */}
+        <div className="roster-area">
+          <div className="align-center">
+            <h4 className="text-bold">My Roster</h4>
+          </div>
+          <Row>
+            <Col s={3}>
+              <Card
+                className="grey darken-4"
+                header={<CardTitle />}
+                title="Player Name"
+                reveal={"jdjkvsjdn sweej3e93"}
+              >
+                <p>
+                  <a class="waves-effect waves-light btn-x small">
+                    <i class="material-icons left">close</i>
+                  </a>
+                </p>
+              </Card>
+            </Col>
+            <Col s={3}>
+              <Card
+                className="grey darken-4"
+                header={<CardTitle />}
+                title="Player Name"
+                reveal={"jdjkvsjdn sweej3e93"}
+              >
+                <p>
+                  <a class="waves-effect waves-light btn-x small">
+                    <i class="material-icons left">close</i>
+                  </a>
+                </p>
+              </Card>
+            </Col>
+            <Col s={3}>
+              <Card
+                className="grey darken-4"
+                header={<CardTitle />}
+                title="Player Name"
+                reveal={"jdjkvsjdn sweej3e93"}
+              >
+                <p>
+                  <a class="waves-effect waves-light btn-x small">
+                    <i class="material-icons left">close</i>
+                  </a>
+                </p>
+              </Card>
+            </Col>
+            <Col s={3}>
+              <Card
+                className="grey darken-4"
+                header={<CardTitle />}
+                title="Player Name"
+                reveal={"jdjkvsjdn sweej3e93"}
+              >
+                <p>
+                  <a class="waves-effect waves-light btn-x small">
+                    <i class="material-icons left">close</i>
+                  </a>
+                </p>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+        {/* <Row>
+          <Col s={4} className="light grey white-text">
+            Compare Cards
+          </Col>
+          <Col s={4} className="light grey white-text">
+            Compare Cards
+          </Col>
+          <Col s={4} className="light grey white-text">
+            Compare Cards
+          </Col>
+        </Row> */}
       </div>
     );
   }

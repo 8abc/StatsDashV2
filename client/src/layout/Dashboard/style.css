@@ -9,3 +9,13 @@
   margin-top: 80px;
   height: 100px !important;
 }
+/* .roster-area {
+  background-color: grey;
+} */
+.align-center {
+  text-align: center;
+}
+.text-bold {
+  font-weight: 900;
+  font-size: 50px;
+}
