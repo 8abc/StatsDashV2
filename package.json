@@ -13,19 +13,27 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.1",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "concurrently": "^4.1.1",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.6.8",
+    "mongoose": "^5.6.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "validator": "^11.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8abc/StatsDashV2.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/8abc/StatsDashV2/issues"
+  },
+  "homepage": "https://github.com/8abc/StatsDashV2#readme"
 }
