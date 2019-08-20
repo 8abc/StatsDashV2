@@ -67,6 +67,7 @@ class Dashboard extends Component {
                   className="btn waves-effect waves-light blue accent-3"
                   type="submit"
                   name="action"
+                  id="search-button"
                 >
                   Search
                   <i class="material-icons right">search</i>

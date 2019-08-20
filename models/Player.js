@@ -13,7 +13,13 @@ var PlayerSchema = new Schema({
 
   team: String,
 
-  height: String
+  height: String,
+  //this is a reference to the user that have chosen this player
+  userTeams: [
+    {
+      type: String
+    }
+  ]
 });
 
 // This creates our model from the above schema, using mongoose's model method
