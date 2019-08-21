@@ -10,15 +10,12 @@ import {
   SideNav,
   SideNavItem,
   Button,
-  Navbar,
-  NavItem,
   Icon,
   Modal,
   Select,
-  RadioGroup,
-  onChange,
   Card,
-  CardTitle
+  CardTitle,
+  TextInput
 } from "react-materialize";
 
 class Dashboard extends Component {
@@ -40,8 +37,8 @@ class Dashboard extends Component {
               id="navButton2"
               node="a"
             >
-              Dashboard
-              <Icon right>dashboard</Icon>
+              <i class="material-icons right">dashboard</i>
+              Click Dashboard
             </Button>
           }
           options={{ closeOnClick: true }}
@@ -61,7 +58,7 @@ class Dashboard extends Component {
 
           <SideNavItem href="#!second">
             <Modal
-              header="Search"
+              header="Search for a Player OR Stat"
               trigger={
                 <button
                   className="btn waves-effect waves-light blue accent-3"
@@ -75,30 +72,25 @@ class Dashboard extends Component {
               }
             >
               <p>
-                <Select multiple value={[""]}>
-                  <option value="" disabled>
-                    Select what you want to
-                  </option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </Select>
+                <TextInput
+                  icon="search"
+                  placeholder="Enter exact player name"
+                />
+                <TextInput icon="search" placeholder="Enter type of stat" />
               </p>
             </Modal>
           </SideNavItem>
           <SideNavItem divider />
           <SideNavItem className="logout" waves href="#!third">
             <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn waves-effect waves-light blue accent-3"
+              type="submit"
+              name="action"
+              id="search-button"
             >
               Logout
+              <i class="material-icons right">logout</i>
             </button>
           </SideNavItem>
         </SideNav>
