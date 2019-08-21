@@ -12,7 +12,6 @@ import {
   Button,
   Icon,
   Modal,
-  Select,
   Card,
   CardTitle,
   TextInput
@@ -76,7 +75,26 @@ class Dashboard extends Component {
                   icon="search"
                   placeholder="Enter exact player name"
                 />
+                <Button
+                  type="submit"
+                  className="btn waves-effect waves-light blue accent-3"
+                  id="playerName"
+                  waves="light"
+                >
+                  Submit
+                  <Icon right>send</Icon>
+                </Button>
+
                 <TextInput icon="search" placeholder="Enter type of stat" />
+                <Button
+                  type="submit"
+                  className="btn waves-effect waves-light blue accent-3"
+                  id="stat"
+                  waves="light"
+                >
+                  Submit
+                  <Icon right>send</Icon>
+                </Button>
               </p>
             </Modal>
           </SideNavItem>
