@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import { Parallax, Background } from "react-parallax";
-import { Parallax, Row, Col } from "react-materialize";
+import { Parallax } from "react-materialize";
 // import Footer from "./components/Footer/Footer";
 import "./style.css";
 
@@ -8,7 +8,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <Parallax className="parallax-image" image={<img />} />
+        <Parallax className="parallax-image" />
         <div className="section white">
           <div className="row container">
             <div className="align-center">
@@ -28,7 +28,7 @@ class Landing extends Component {
           </div>
         </div>
 
-        <Parallax className="parallax-image2" image={<img />} />
+        <Parallax className="parallax-image2" />
         <div className="About-container z-depth-3 align-center">
           <section id="team">
             <h5 className="text-bold">The Team</h5>
