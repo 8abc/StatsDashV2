@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-// import RosterCard from "./components/RosterCard/RosterCard";
+import RosterCard from "../../components/RosterCard/RosterCard";
+import { Klay, Jordan } from "./Klay";
 // import Footer from "./components/Footer/Footer";
 import {
   Row,
@@ -18,9 +19,35 @@ import {
 } from "react-materialize";
 
 class Dashboard extends Component {
+  state = {
+    playerSearch: "",
+    statSearch: "",
+    players: [Klay]
+  };
+
+  componentDidMount = () => {
+    //get all the players that have been save
+    // add it to the state
+  };
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
+  };
+
+  searchPlayer = e => {
+    e.preventDefault();
+    console.log("player: ", this.state.playerSearch);
+    const { players } = this.state;
+    players.push(Jordan);
+    this.setState({
+      players
+    });
   };
 
   render() {
@@ -72,6 +99,8 @@ class Dashboard extends Component {
             >
               <p>
                 <TextInput
+                  name="playerSearch"
+                  onChange={this.handleChange}
                   icon="search"
                   placeholder="Enter exact player name"
                 />
@@ -80,12 +109,18 @@ class Dashboard extends Component {
                   className="btn waves-effect waves-light blue accent-3"
                   id="playerName"
                   waves="light"
+                  onClick={this.searchPlayer}
                 >
                   Submit
                   <Icon right>send</Icon>
                 </Button>
 
-                <TextInput icon="search" placeholder="Enter type of stat" />
+                <TextInput
+                  name="statSearch"
+                  onChange={this.handleChange}
+                  icon="search"
+                  placeholder="Enter type of stat"
+                />
                 <Button
                   type="submit"
                   className="btn waves-effect waves-light blue accent-3"
@@ -112,8 +147,11 @@ class Dashboard extends Component {
             </button>
           </SideNavItem>
         </SideNav>
-        {/* <RosterCard /> */}
-        <div className="roster-area">
+        {this.state.players.map((myPlayer, i) => {
+          return <RosterCard playerInfo={myPlayer} key={i} />;
+        })}
+        {/* <RosterCard playerInfo={Klay} /> */}
+        {/* <div className="roster-area">
           <div className="align-center">
             <h4 className="text-bold">My Roster</h4>
           </div>
@@ -123,49 +161,7 @@ class Dashboard extends Component {
                 className="grey darken-4"
                 header={<CardTitle />}
                 title="Player Name"
-                reveal={"jdjkvsjdn sweej3e93"}
-              >
-                <p>
-                  <a class="waves-effect waves-light btn-x small">
-                    <i class="material-icons left">close</i>
-                  </a>
-                </p>
-              </Card>
-            </Col>
-            <Col s={3}>
-              <Card
-                className="grey darken-4"
-                header={<CardTitle />}
-                title="Player Name"
-                reveal={"jdjkvsjdn sweej3e93"}
-              >
-                <p>
-                  <a class="waves-effect waves-light btn-x small">
-                    <i class="material-icons left">close</i>
-                  </a>
-                </p>
-              </Card>
-            </Col>
-            <Col s={3}>
-              <Card
-                className="grey darken-4"
-                header={<CardTitle />}
-                title="Player Name"
-                reveal={"jdjkvsjdn sweej3e93"}
-              >
-                <p>
-                  <a class="waves-effect waves-light btn-x small">
-                    <i class="material-icons left">close</i>
-                  </a>
-                </p>
-              </Card>
-            </Col>
-            <Col s={3}>
-              <Card
-                className="grey darken-4"
-                header={<CardTitle />}
-                title="Player Name"
-                reveal={"jdjkvsjdn sweej3e93"}
+                reveal={["Full name: ", ]}
               >
                 <p>
                   <a class="waves-effect waves-light btn-x small">
@@ -175,7 +171,7 @@ class Dashboard extends Component {
               </Card>
             </Col>
           </Row>
-        </div>
+        </div> */}
         {/* <Row>
           <Col s={4} className="light grey white-text">
             Compare Cards
