@@ -10,9 +10,9 @@ const playerStats = require("../../models/PlayerStatSchema");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 router.get("/search", (req, res) => {
-    playerStats.findOne({ "full-name": req.body.name }, (err, result) => {
-        if (err) throw err;
-        res.json(result);
-    });
+  playerStats.findOne({ "full-name": req.body.name }, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
 });
 module.exports = router;
