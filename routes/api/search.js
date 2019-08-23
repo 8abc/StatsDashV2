@@ -14,5 +14,15 @@ router.get("/", (req, res) => {
             console.log(result);
         }
     );
+
+// Load input validation
+const validateRegisterInput = require("../../validation/register");
+const validateLoginInput = require("../../validation/login");
+router.get("/search", (req, res) => {
+  playerStats.findOne({ "full-name": req.body.name }, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+
 });
 module.exports = router;

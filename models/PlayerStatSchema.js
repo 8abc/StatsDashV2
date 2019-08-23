@@ -1,6 +1,7 @@
 const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 const statsSchema = new Schema({
+  
     id: {
         type: String,
         required: true

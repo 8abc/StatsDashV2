@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+const search = require("./routes/api/search");
 const app = express();
 const search = require("./routes/api/search");
 // Bodyparser middleware

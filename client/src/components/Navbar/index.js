@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar, Button, Icon, NavItem } from "react-materialize";
-import { Link } from "react-router-dom";
 import "./style.css";
 
 const NavBar = props => {
