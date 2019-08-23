@@ -5,11 +5,11 @@ const statsSchema = new Schema({
         type: String,
         required: true
     },
-    statue: {
+    status: {
         type: String,
         required: true
     },
-    "full-name": {
+    full_name: {
         type: String,
         required: true
     },
@@ -226,5 +226,5 @@ const statsSchema = new Schema({
         required: true
     }
 });
-var Stats = Mongoose.model("seasonStats", statsSchema);
-module.exports = Stats;
+const Stat = Mongoose.model("playerstat", statsSchema);
+module.exports = Stat;

@@ -13,19 +13,16 @@ const bioSchema = new Schema({
         type: String,
         required: true
     },
+
     full_name: {
         type: String,
         required: true
     },
-    "full-name": {
+    first_name: {
         type: String,
         required: true
     },
-    "first-name": {
-        type: String,
-        required: true
-    },
-    "last-name": {
+    last_name: {
         type: String,
         required: true
     },
@@ -41,7 +38,7 @@ const bioSchema = new Schema({
         type: String,
         required: true
     },
-    "jersey-number": {
+    jersey_number: {
         type: String,
         required: true
     },
@@ -49,7 +46,7 @@ const bioSchema = new Schema({
         type: String,
         required: false
     },
-    "home-town": {
+    home_town: {
         type: String,
         required: false
     },
