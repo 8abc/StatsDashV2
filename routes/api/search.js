@@ -1,10 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const keys = require("../../config/keys");
-const passport = require("passport");
+
 const playerStats = require("../../models/PlayerStatSchema");
+
+router.get("/", (req, res) => {
+    console.log("hit route");
+    //will show the query or damion lee for dmo purposes
+    playerStats.findOne(
+        { full_name: req.body.name || "Damion Lee" },
+        (err, result) => {
+            if (err) throw err;
+            res.json(result);
+            console.log(result);
+        }
+    );
 
 // Load input validation
 const validateRegisterInput = require("../../validation/register");
@@ -14,5 +23,6 @@ router.get("/search", (req, res) => {
     if (err) throw err;
     res.json(result);
   });
+
 });
 module.exports = router;
