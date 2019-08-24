@@ -29,9 +29,9 @@ class RosterCard extends Component {
             reveal={<p>{playerData()}</p>}
           >
             <p>
-              <a className="waves-effect waves-light btn-x small">
-                <i className="material-icons left">close</i>
-              </a>
+              <i className="material-icons left waves-effect waves-light btn-x small">
+                close
+              </i>
             </p>
           </Card>
         </Col>
