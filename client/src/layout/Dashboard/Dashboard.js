@@ -11,7 +11,8 @@ import {
   Button,
   Icon,
   Modal,
-  TextInput
+  TextInput,
+  Checkbox
 } from "react-materialize";
 
 class Dashboard extends Component {
@@ -45,6 +46,43 @@ class Dashboard extends Component {
       players
     });
   };
+
+  // api autocomplete
+
+  // searchPlayer = (searchData) => {
+  //   return axios("/api/search", searchData).then(players => {
+  //     this.setState({
+  //       players: players
+  //     });
+  //   });
+  // };
+
+  // onSubmit = () => {
+  //   e.preventDefault();
+  //   const searchData = {
+  //     player: this.state.playerSearch,
+  //     stat: this.state.statSearch
+  //   };
+  //   this.searchPlayer(searchData);
+  // };
+
+  // lodash debounce or throttle
+  // onChange = e => {
+  // this.setState(
+  //   {
+  //     [e.target.name]: e.target.value
+  //   },
+  //   () => {
+  //     this.searchPlayer();
+  //   }
+  // );
+
+  // ========
+  //   const { players, ...searchData } = this.state;
+  //   searchData[e.target.name] = e.target.value;
+  //   this.setState({ [e.target.name]: e.target.value });
+  //   this.searchPlayer(searchData);
+  // };
 
   render() {
     const { user } = this.props.auth;
@@ -80,7 +118,7 @@ class Dashboard extends Component {
 
           <SideNavItem href="#!second">
             <Modal
-              header="Search for a Player OR Stat"
+              header="Search for a Player OR Select a Type of Stat"
               trigger={
                 <button
                   className="btn waves-effect waves-light blue accent-3"
@@ -94,30 +132,35 @@ class Dashboard extends Component {
               }
             >
               <p>
-                <TextInput
-                  name="playerSearch"
-                  onChange={this.handleChange}
-                  icon="search"
-                  placeholder="Enter exact player name"
-                />
-                <Button
-                  type="submit"
-                  className="btn waves-effect waves-light blue accent-3"
-                  id="playerName"
-                  waves="light"
-                  onClick={this.searchPlayer}
-                >
-                  Submit
-                  <Icon right>send</Icon>
-                </Button>
+                <div>
+                  <TextInput
+                    name="playerSearch"
+                    onChange={this.handleChange}
+                    icon="search"
+                    placeholder="Enter exact player name"
+                  />
+                  <Button
+                    type="submit"
+                    className="btn waves-effect waves-light blue accent-3"
+                    id="playerName"
+                    waves="light"
+                    onClick={this.searchPlayer}
+                  >
+                    Submit
+                    <Icon right>send</Icon>
+                  </Button>
+                </div>
+                <div className="statsCheckbox">
+                  <hr />
+                  <Checkbox value="Red" label="2-Points Made" />
+                  <Checkbox value="Red" label="3-Points Made" />
+                  <Checkbox value="Red" label="Free Throws Made" />
+                  <Checkbox value="Red" label="Rebounds" />
+                  <Checkbox value="Red" label="Assist" />
+                  <Checkbox value="Red" label="Blocks" />
+                </div>
 
-                <TextInput
-                  name="statSearch"
-                  onChange={this.handleChange}
-                  icon="search"
-                  placeholder="Enter type of stat"
-                />
-                <Button
+                {/* <Button
                   type="submit"
                   className="btn waves-effect waves-light blue accent-3"
                   id="stat"
@@ -125,8 +168,9 @@ class Dashboard extends Component {
                 >
                   Submit
                   <Icon right>send</Icon>
-                </Button>
+                </Button> */}
               </p>
+              {/* put all search results here */}
             </Modal>
           </SideNavItem>
           <SideNavItem divider />
