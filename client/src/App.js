@@ -39,14 +39,14 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+        <Navbar
+          user={{
+            id: false
+          }}
+        />
         <Router>
           <div className="App">
             {/* harding coding user */}
-            <Navbar
-              user={{
-                id: false
-              }}
-            />
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />

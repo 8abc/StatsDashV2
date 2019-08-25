@@ -6,15 +6,11 @@ import RosterCard from "../../components/RosterCard/RosterCard";
 import { Klay, Jordan } from "./Klay";
 // import Footer from "./components/Footer/Footer";
 import {
-  Row,
-  Col,
   SideNav,
   SideNavItem,
   Button,
   Icon,
   Modal,
-  Card,
-  CardTitle,
   TextInput
 } from "react-materialize";
 
@@ -150,39 +146,6 @@ class Dashboard extends Component {
         {this.state.players.map((myPlayer, i) => {
           return <RosterCard playerInfo={myPlayer} key={i} />;
         })}
-        {/* <RosterCard playerInfo={Klay} /> */}
-        {/* <div className="roster-area">
-          <div className="align-center">
-            <h4 className="text-bold">My Roster</h4>
-          </div>
-          <Row>
-            <Col s={3}>
-              <Card
-                className="grey darken-4"
-                header={<CardTitle />}
-                title="Player Name"
-                reveal={["Full name: ", ]}
-              >
-                <p>
-                  <a class="waves-effect waves-light btn-x small">
-                    <i class="material-icons left">close</i>
-                  </a>
-                </p>
-              </Card>
-            </Col>
-          </Row>
-        </div> */}
-        {/* <Row>
-          <Col s={4} className="light grey white-text">
-            Compare Cards
-          </Col>
-          <Col s={4} className="light grey white-text">
-            Compare Cards
-          </Col>
-          <Col s={4} className="light grey white-text">
-            Compare Cards
-          </Col>
-        </Row> */}
       </div>
     );
   }

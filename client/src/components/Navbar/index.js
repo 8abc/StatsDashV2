@@ -10,29 +10,19 @@ const NavBar = props => {
       alignLinks="right"
     >
       <NavItem href="/">
-        <Button className="blue accent-3" waves="light" id="navButton" node="a">
+        <Button className="blue accent-3" waves="light" id="navButton">
           Home
           <Icon right>home</Icon>
         </Button>
       </NavItem>
       <NavItem href="/login">
-        <Button
-          className="blue accent-3"
-          waves="light"
-          id="authButton"
-          node="a"
-        >
+        <Button className="blue accent-3" waves="light" id="authButton">
           Login
           <Icon right>person</Icon>
         </Button>
       </NavItem>
       <NavItem href="/register">
-        <Button
-          className="blue accent-3"
-          waves="light"
-          id="authButton"
-          node="a"
-        >
+        <Button className="blue accent-3" waves="light" id="authButton">
           Register
           <Icon right>person_add</Icon>
         </Button>

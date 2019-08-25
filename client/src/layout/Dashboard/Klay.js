@@ -117,3 +117,22 @@ export const Jordan = {
   minus: 1873,
   plus: 1773
 };
+
+export const Kevin = {
+  // _id: ObjectId("5d5b4586887ef7f9a6b125db"),
+  number: 7,
+  // id: "53f2fa48-e61b-49fb-843d-8a3e872257eb",
+  team: "Warriors",
+  fullname: "Kevin Durant",
+  firstname: "Kevin",
+  lastname: "Durant",
+  height: 81,
+  weight: 240,
+  position: "F",
+  jerseynumber: 35,
+  college: "Texas",
+  birthplace: "Washington, DC, USA",
+  experience: 11,
+  birthday: "9/29/1988",
+  draftstatus: "round: 1 pick: 2"
+};
