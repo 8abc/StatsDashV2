@@ -6,6 +6,13 @@ const users = require("./routes/api/users");
 const search = require("./routes/api/search");
 const app = express();
 
+
+// app.use((req, res, next) => {
+//   console.log("middle ware");
+//   console.log(req.url);
+//   next();
+// });
+
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -28,7 +35,14 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
+
+
+// app.use((rq, res) => {
+//   res.status(404).send("bad");
+// });
+
 app.use("/api/search", search);
+
 const port = process.env.PORT || 5000;
 app.listen(port, () =>
   console.log(`Server Test up and running on port ${port} !`)

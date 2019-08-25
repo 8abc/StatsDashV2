@@ -8,7 +8,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <Parallax className="parallax-image" />
+        {/* <Parallax image={<img src="./ballCropped.jpg" />} /> */}
         <div className="section white">
           <div className="row container">
             <div className="align-center">
@@ -28,7 +28,7 @@ class Landing extends Component {
           </div>
         </div>
 
-        <Parallax className="parallax-image2" />
+        {/* <Parallax className="parallax-image2" /> */}
         <div className="About-container z-depth-3 align-center">
           <section id="team">
             <h5 className="text-bold">The Team</h5>
