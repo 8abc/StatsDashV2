@@ -1,28 +1,24 @@
+// const express = require("express");
+// const router = express.Router();
+
+// const PlayerCtrl = require("../../controllers/playerController");
+
+// router.get("/players", PlayerCtrl.getPlayers);
+
+// module.exports = router;
+
 const express = require("express");
 const router = express.Router();
 
-const playerStats = require("../../models/PlayerStatSchema");
+const Bio = require("../../models/PlayerBioSchema");
 
-router.get("/", (req, res) => {
-  console.log("hit route");
-  //will show the query or damion lee for dmo purposes
-  playerStats.findOne(
-    { full_name: req.body.name || "Damion Lee" },
-    (err, result) => {
-      if (err) throw err;
+router.get("/search", function(req, res) {
+  playerBio.find({}, function(err, allPlayers) {
+    if (err) {
+      console.log(err);
+    } else {
       res.json(result);
-      console.log(result);
     }
-  );
-
-  // Load input validation
-  const validateRegisterInput = require("../../validation/register");
-  const validateLoginInput = require("../../validation/login");
-  router.get("/search", (req, res) => {
-    playerStats.findOne({ full_name: req.body.name }, (err, result) => {
-      if (err) throw err;
-      res.json(result);
-    });
   });
 });
 

@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import RosterCard from "../../components/RosterCard/RosterCard";
 import { Klay, Jordan } from "./Klay";
+import AutoComplete from "../../components/autoComplete/autoComplete";
+import players from "../../components/players/players";
 // import Footer from "./components/Footer/Footer";
 import {
   SideNav,
@@ -46,43 +48,6 @@ class Dashboard extends Component {
       players
     });
   };
-
-  // api autocomplete
-
-  // searchPlayer = (searchData) => {
-  //   return axios("/api/search", searchData).then(players => {
-  //     this.setState({
-  //       players: players
-  //     });
-  //   });
-  // };
-
-  // onSubmit = () => {
-  //   e.preventDefault();
-  //   const searchData = {
-  //     player: this.state.playerSearch,
-  //     stat: this.state.statSearch
-  //   };
-  //   this.searchPlayer(searchData);
-  // };
-
-  // lodash debounce or throttle
-  // onChange = e => {
-  // this.setState(
-  //   {
-  //     [e.target.name]: e.target.value
-  //   },
-  //   () => {
-  //     this.searchPlayer();
-  //   }
-  // );
-
-  // ========
-  //   const { players, ...searchData } = this.state;
-  //   searchData[e.target.name] = e.target.value;
-  //   this.setState({ [e.target.name]: e.target.value });
-  //   this.searchPlayer(searchData);
-  // };
 
   render() {
     const { user } = this.props.auth;
@@ -133,11 +98,12 @@ class Dashboard extends Component {
             >
               <p>
                 <div>
-                  <TextInput
-                    name="playerSearch"
-                    onChange={this.handleChange}
-                    icon="search"
-                    placeholder="Enter exact player name"
+                  <AutoComplete
+                    items={players}
+                    // name="playerSearch"
+                    // onChange={this.handleChange}
+                    // icon="search"
+                    // placeholder="Enter exact player name"
                   />
                   <Button
                     type="submit"

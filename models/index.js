@@ -2,5 +2,6 @@
 
 module.exports = {
   User: require("./User"),
-  Player: require("./Player")
+  Player: require("./Player"),
+  Bio: require("./PlayerBioSchema")
 };

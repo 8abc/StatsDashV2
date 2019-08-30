@@ -12,19 +12,19 @@ const NavBar = props => {
       <NavItem href="/">
         <Button className="blue accent-3" waves="light" id="navButton">
           Home
-          <Icon right>home</Icon>
+          <Icon center>home</Icon>
         </Button>
       </NavItem>
       <NavItem href="/login">
         <Button className="blue accent-3" waves="light" id="authButton">
           Login
-          <Icon right>person</Icon>
+          <Icon center>person</Icon>
         </Button>
       </NavItem>
       <NavItem href="/register">
         <Button className="blue accent-3" waves="light" id="authButton">
           Register
-          <Icon right>person_add</Icon>
+          <Icon center>person_add</Icon>
         </Button>
       </NavItem>
     </Navbar>
