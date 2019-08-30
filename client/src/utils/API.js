@@ -1,20 +1,19 @@
 import axios from "axios";
 
-export default {
-  // Gets all players
-  getPlayers: function() {
-    return axios.get("/api/players");
-  },
-  // Gets the book with the given id
-  getPlayer: function(id) {
-    return axios.get("/api/player/" + id);
-  },
-  // Deletes the book with the given id
-  deletePlayer: function(id) {
-    return axios.delete("/api/player/" + id);
-  },
-  // Saves a book to the database
-  savePlayer: function(playerData) {
-    return axios.post("/api/player", playerData);
-  }
+const api = axios.create({
+  bareURL: "http://localhost:5000/api"
+});
+
+export const insertPlayer = payload => api.post(`/player`, payload);
+export const getAllPlayers = () => api.get(`/players`);
+export const deletePlayerById = id => api.delete(`/player/${id}`);
+export const getPlayerById = id => api.get(`/player/${id}`);
+
+const apis = {
+  insertPlayer,
+  getAllPlayers,
+  deletePlayerById,
+  getPlayerById
 };
+
+export default apis;

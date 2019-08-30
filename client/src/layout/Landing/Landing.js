@@ -8,7 +8,14 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        {/* <Parallax image={<img src="./ballCropped.jpg" />} /> */}
+        <Parallax
+          image={
+            <img
+              src="https://images.unsplash.com/photo-1485395037613-e83d5c1f5290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+              alt="hoop"
+            />
+          }
+        />
         <div className="section white">
           <div className="row container">
             <div className="align-center">
@@ -28,7 +35,14 @@ class Landing extends Component {
           </div>
         </div>
 
-        {/* <Parallax className="parallax-image2" /> */}
+        <Parallax
+          image={
+            <img
+              src="https://images.unsplash.com/photo-1551479460-5e76c686816a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80"
+              alt="Jersey"
+            />
+          }
+        />
         <div className="About-container z-depth-3 align-center">
           <section id="team">
             <h5 className="text-bold">The Team</h5>

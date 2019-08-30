@@ -7,13 +7,13 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var PlayerSchema = new Schema({
   // `title` is of type String
-  name: String,
+  name: { type: String, required: true },
   // `body` is of type String
-  age: String,
+  team: { type: String, required: true },
 
-  team: String,
+  weight: { type: Number, required: true },
 
-  height: String,
+  height: { type: Number, required: true },
   //this is a reference to the user that have chosen this player
   userTeams: [
     {
